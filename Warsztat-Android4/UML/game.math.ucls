@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.2" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" language="java" name="game.math.Matrix4x4" project="Warsztat-Android4" 
+    file="/Warsztat-Android4/src/game/math/Matrix4x4.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="106" width="130" x="41" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="game.math.Util" project="Warsztat-Android4" 
+    file="/Warsztat-Android4/src/game/math/Util.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="142" width="164" x="211" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="game.math.Matrix3x3" project="Warsztat-Android4" 
+    file="/Warsztat-Android4/src/game/math/Matrix3x3.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="160" width="173" x="415" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="game.math.Vector2D" project="Warsztat-Android4" 
+    file="/Warsztat-Android4/src/game/math/Vector2D.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="304" width="179" x="628" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="game.math.Vector3D" project="Warsztat-Android4" 
+    file="/Warsztat-Android4/src/game/math/Vector3D.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="322" width="189" x="847" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
