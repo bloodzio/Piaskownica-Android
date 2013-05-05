@@ -6,6 +6,7 @@
  */
 package game.math;
 
+
 public class Vector3D
 {
 	private float x;
