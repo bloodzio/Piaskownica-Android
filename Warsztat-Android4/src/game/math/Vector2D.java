@@ -1,43 +1,83 @@
-/**
- * 
- * @author Leszek Uchacz
- * @version 0.1
- * @since 2013.5.5
- */
 package game.math;
 
-import android.R.bool;
-
+//import android.R.bool;
+/**
+ *Wektor - Uporządkowana para liczb u =[x,y]  gdzie x i y są jego wpółrzędnymi w protokątnym układzie współrzednych.<br>
+ *<img alt=”description” height=”50″ width=”50″ src=wektor2d.png><br>
+ *Wektory generalnie mogą być reprezentowane na 2 różne sposoby.<br>
+ *1: przez długość i jakiś kąt(trygonometria).<br>
+ *2: przez początkowy i końcowy punkt(macierze).<br>
+ * @author Leszek Uchacz
+ * @version beta
+ * 
+ */
 public class Vector2D
 {
+	/**Współrzędna x wektora  **/
 	private float x;
+	/**Współrzędna y wektora **/
 	private float y;
 	
-	Vector2D(){ this(0,0); }
-	
-	Vector2D(float x , float y)
+	/**Konstruktor domyślny  Vector2D(0,0) **/
+	public Vector2D(){ this(0,0); }
+	/**Konstruktor parametryczny wektora 
+	 * @param x wektora
+	 * @param y wektora*/ 
+	public Vector2D(float x , float y)
 	{
 		this.x=x;
 		this.y=y;
 	}
 	
+	/**Zwraca dlugosc wectora z T.Pitagorasa a^2 * b^2 = c^2 <br>
+	 * Dlugość od współrzednychdanego wektora  do wektora zerowgo (0,0)
+	 * @return sqrt(x * x + y * y) **/
 	public float length()
 	{
 		return  (float)Math.sqrt(x * x + y * y);
 	}
-
-	public void  add(Vector2D v)
+	/** Dodajemy Vector2D do Vectora2D w=[x1+x2,y1+y2]
+	 * @parm Vector2D który chcemy dodać
+	 * @return  Nowy Vector2D [x1+x2,y1+y2]**/
+	public Vector2D  add(Vector2D v)
 	{
 		this.x += v.x;
 		this.y += v.y;
+		return this;
+		
 	}
-	public void  add(float x,float y)
+	/** Dodajemy Vector2D do Vectora2D  w=[x1+x2,y1+y2]
+	 * @parm x który chcemy dodać
+	 * @parm y który chcemy dodać
+	 * @return  Nowy Vector2D w=[x1+x2,y1+y2]**/
+	public Vector2D  add(float x,float y)
 	{
 		this.x += x;
 		this.y += y;
+		return this;
 	}
-	
-	
+	/** Odejmujemy Vector2D od Vectora2D  w=[x1-x2,y1-y2]
+	 * @parm Vector2D który chcemy odjąć
+	 * @return Nowy Vector2D [x1-x2,y1-y2]**/
+	public Vector2D sub(Vector2D v)	
+	{
+		this.x -= v.x;
+		this.y -= v.y;
+		return this;
+	}
+	/** Odejmujemy Vector2D od Vectora2D  w=[x1-x2,y1-y2]
+	 * @parm x który chcemy odjąć
+	 * @parm y który chcemy odjąć
+	 * @return  Nowy Vector2D [x1-x2,y1-y2]**/
+	public Vector2D sub(float x,float y)	
+	{
+		this.x -= x;
+		this.y -= y;
+		return this;
+	}
+	/**
+	 *  W wyniku normalizacji otrzymujemy wektor zawarty w przedziale <0,1>
+	 * @return Nowy Vector2D */
 	public Vector2D normal()
 	{
 		float length = length();
@@ -48,37 +88,34 @@ public class Vector2D
 		}
 		return this;
 	}
-	
-	public Vector2D set(float x,float y)
+	/** Mnożenie wektora z Vectora2D w=[x1*x2,y1*y2]
+	 * @return  Nowy Vector2D [x1*x2,y1*y2]**/
+	public Vector2D mul(Vector2D v)
 	{
-		this.x = x;
-		this.y = y;
+		this.x *= v.x;
+		this.y *= v.y;
 		return this;
 	}
-		
-	public Vector2D sub(Vector2D v)	
+	
+	/** Mnożenie wektora z Vectora2D w=[x1*x2,y1*y2]
+	 * @return  Nowy Vector2D [x1*x2,y1*y2]**/
+	public Vector2D mul(float x,float y)
 	{
-		this.x -= v.x;
-		this.y -= v.y;
+		this.x *= x;
+		this.y *= y;
 		return this;
 	}
-	public Vector2D mul(float f)
+	
+	/** Dzielenie wektora z Vectora2D w=[x1/x2,y1*y2]
+	 * @return  Nowy Vector2D [x1*x2,y1*y2]**/
+	public Vector2D div(Vector2D v)
 	{
-		this.x *= f;
-		this.y *= f;
-		return this;
-		
+		this.x /= v.x;
+		this.y /= v.x;
+		return this;	
 	}
-	
-	
-	public Vector2D div(float f)
-	{
-		this.x /= f;
-		this.y /= f;
-		return this;
-		
-	}
-	
+	/** Porównanie dwóch wektorów
+	 * @return  Jeśli takie same = true**/
 	public boolean isEqual(Vector2D v)
 	{
 		if ((this.x == v.x ) && (this.y == v.y))
@@ -87,6 +124,12 @@ public class Vector2D
 		}
 		return false;
 	
+	}
+	/** Zmiana wartości pól x i y wektora */
+	public void set(float x,float y)
+	{
+		this.x = x;
+		this.y = y;
 	}
 }
 
