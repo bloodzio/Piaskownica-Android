@@ -14,9 +14,9 @@ package game.math;
 public class Vector2D
 {
 	/**Współrzędna x wektora  **/
-	private float x;
+	public float x;
 	/**Współrzędna y wektora **/
-	private float y;
+	public float y;
 	
 	/**Konstruktor domyślny  Vector2D(0,0) **/
 	public Vector2D(){ this(0,0); }
@@ -36,7 +36,7 @@ public class Vector2D
 	{
 		return  (float)Math.sqrt(x * x + y * y);
 	}
-	/** Dodajemy Vector2D do Vectora2D w=[x1+x2,y1+y2]
+	/** Dodajemy  Vector2D do wektora
 	 * @parm Vector2D który chcemy dodać
 	 * @return  Nowy Vector2D [x1+x2,y1+y2]**/
 	public Vector2D  add(Vector2D v)
@@ -46,7 +46,7 @@ public class Vector2D
 		return this;
 		
 	}
-	/** Dodajemy Vector2D do Vectora2D  w=[x1+x2,y1+y2]
+	/** Przesunięcie ( translacja ) Vectora2D o wartosc[x,y] 
 	 * @parm x który chcemy dodać
 	 * @parm y który chcemy dodać
 	 * @return  Nowy Vector2D w=[x1+x2,y1+y2]**/
@@ -56,7 +56,7 @@ public class Vector2D
 		this.y += y;
 		return this;
 	}
-	/** Odejmujemy Vector2D od Vectora2D  w=[x1-x2,y1-y2]
+	/** Odejmujemy Vector2D od wektora  
 	 * @parm Vector2D który chcemy odjąć
 	 * @return Nowy Vector2D [x1-x2,y1-y2]**/
 	public Vector2D sub(Vector2D v)	
@@ -65,7 +65,7 @@ public class Vector2D
 		this.y -= v.y;
 		return this;
 	}
-	/** Odejmujemy Vector2D od Vectora2D  w=[x1-x2,y1-y2]
+	/** Przesunięcie wektora o wartosc[x,y]  
 	 * @parm x który chcemy odjąć
 	 * @parm y który chcemy odjąć
 	 * @return  Nowy Vector2D [x1-x2,y1-y2]**/
@@ -77,7 +77,7 @@ public class Vector2D
 	}
 	/**
 	 *  W wyniku normalizacji otrzymujemy wektor zawarty w przedziale <0,1>
-	 * @return Nowy Vector2D */
+	 * @return |x| i |y| w przedziale <0,1> */
 	public Vector2D normal()
 	{
 		float length = length();
@@ -88,7 +88,7 @@ public class Vector2D
 		}
 		return this;
 	}
-	/** Mnożenie wektora z Vectora2D w=[x1*x2,y1*y2]
+	/** Mnożenie (skalowanie względem początku układu współ(0,0)) wektora o Vectora2D 
 	 * @return  Nowy Vector2D [x1*x2,y1*y2]**/
 	public Vector2D mul(Vector2D v)
 	{
@@ -97,7 +97,7 @@ public class Vector2D
 		return this;
 	}
 	
-	/** Mnożenie wektora z Vectora2D w=[x1*x2,y1*y2]
+	/**  Mnożenie (skalowanie względem początku układu współ(0,0)) wektora o wartosci x i y. 
 	 * @return  Nowy Vector2D [x1*x2,y1*y2]**/
 	public Vector2D mul(float x,float y)
 	{
@@ -106,16 +106,16 @@ public class Vector2D
 		return this;
 	}
 	
-	/** Dzielenie wektora z Vectora2D w=[x1/x2,y1*y2]
-	 * @return  Nowy Vector2D [x1*x2,y1*y2]**/
+	/** Dzielenie wektora o Vectora2D 
+	 * @return  Nowy Vector2D [x1/x2,y1/y2]**/
 	public Vector2D div(Vector2D v)
 	{
 		this.x /= v.x;
 		this.y /= v.x;
 		return this;	
 	}
-	/** Porównanie dwóch wektorów
-	 * @return  Jeśli takie same = true**/
+	/** Porównanie dwóch wektorów 2D
+	 * @return true = Jeśli takie same **/
 	public boolean isEqual(Vector2D v)
 	{
 		if ((this.x == v.x ) && (this.y == v.y))
@@ -131,6 +131,8 @@ public class Vector2D
 		this.x = x;
 		this.y = y;
 	}
+	
+/**  TODO : Transformacja -  Obrót o kąt */
 }
 
 
