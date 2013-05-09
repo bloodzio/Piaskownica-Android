@@ -9,15 +9,20 @@ package game.math;
 
 public class Vector3D
 {
-	/**Skrót dla Vector3D(1, 0, 0)**/
+	/**Wektor Jednostkowy (wersor)<br>
+	 * Skrót dla Vector3D(1, 0, 0)**/
 	public final static Vector3D right = new Vector3D(1, 0, 0);
-	/**Skrót dla Vector3D(0, 1, 0)**/
+	/**Wektor Jednostkowy (wersor)<br>
+	 * Skrót dla Vector3D(0, 1, 0)**/
 	public final static Vector3D up = new Vector3D(0, 1, 0);
-	/**Skrót dla Vector3D(0, 0, 1)**/
+	/**Wektor Jednostkowy (wersor)<br>
+	 * Skrót dla Vector3D(0, 0, 1)**/
 	public final static Vector3D forward = new Vector3D(0, 0, 1);
-	/**Skrót dla Vector3D(0, 0, 0)**/
+	/**Wektor Jednostkowy (wersor)<br>
+	 * Skrót dla Vector3D(0, 0, 0)**/
 	public final static Vector3D zero = new Vector3D(0, 0, 0);
-	/**Skrót dla Vector3D(1, 1, 1)**/
+	/**Wektor Jednostkowy (wersor)<br>
+	 * Skrót dla Vector3D(1, 1, 1)**/
 	public final static Vector3D one = new Vector3D(1, 1, 1);
 	
 	
